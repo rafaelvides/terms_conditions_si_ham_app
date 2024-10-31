@@ -248,21 +248,21 @@
       Para cualquier consulta, puede contactarnos en: seedcodesv@gmail.com /
       (503) 24975207.
     </p>
-    <button class="button" onclick="cerrarPestaña()">Cerrar la Aplicación</button>
+    <button class="button" onclick="cerrarPestaña()">
+      Cerrar la Aplicación
+    </button>
 
     <button class="button" onclick="abrirPestaña()">Abrir la Aplicación</button>
 
     <script>
-        function cerrarPestaña() {
-             
-            if (window.opener) {
-        window.opener.history.replaceState(null, null, 'URL_DE_TU_PAGINA_PRINCIPAL'); // Reemplaza con la URL de inicio
-        window.close();
-    }
-        }
-        function abrirPestaña() {
-          window.open('http://localhost:5173/', '_blank');
-        }
+      function cerrarPestaña() {
+        window.history.replaceState({}, '', '/');
+
+  window.close();
+      }
+      function abrirPestaña() {
+        <a href="myapp://">Regresar a la app</a>        
+      }
     </script>
     <footer>
       <p>&copy; 2024 Si-Ham-Occidente. Todos los derechos reservados.</p>
