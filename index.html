@@ -79,6 +79,7 @@
         border: none;
         color: white;
         padding: 15px 32px;
+
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -90,6 +91,12 @@
       }
       .button:active {
         transform: scale(0.95);
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
       }
     </style>
   </head>
@@ -246,16 +253,17 @@
     <h2>14. Contacto</h2>
     <p>
       Para cualquier consulta, puede contactarnos en: seedcodesv@gmail.com /
-      (503) 24975207.
+      +(503) 24975207.
     </p>
-    <button class="button" onclick="cerrarPestaña()">
-      Cerrar la Aplicación
-    </button>
-
-    <button class="button" onclick="abrirPestaña()">Abrir la Aplicación</button>
-    <button class="button" onclick="goBackToApp()">Regresar a la App 2</button> 
+    <div class="button-container">
+      <button class="button" onclick="goBackToApp()">
+        Aceptar y Continuar
+      </button>
+    </div>
     <script>
       function goBackToApp() {
+        window.history.back();
+        window.open('','_self').close();
         window.location.href = "myapp://somepath/login --android";
       }
     </script>
