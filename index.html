@@ -253,15 +253,10 @@
     </button>
 
     <button class="button" onclick="abrirPestaña()">Abrir la Aplicación</button>
-
+    <button class="button" onclick="goBackToApp()">Regresar a la App</button> 
     <script>
-      function cerrarPestaña() {
-        window.history.replaceState({}, "", "/");
-
-        window.close();
-      }
-      function abrirPestaña() {
-        <a href="myapp://">Regresar a la app</a>;
+      function goBackToApp() {
+        window.location.href = "sihamoccidente://";
       }
     </script>
     <footer>
